@@ -25,9 +25,9 @@ class String:
         return f"str({self.string!r})"
 class Character:
     def __init__(self, character: str):
-        self.character = character
+        self.character = ord(character)
     def __str__(self):
-        return f"char({self.character!r})"
+        return f"char({chr(self.character)!r})"
 
 class Lexer:
     SYMBOLS = {
